@@ -3,6 +3,11 @@
     <div>
       <h2><%= @event.name %></h2>
       <p>Created by <%= @event.creator_name %> on <%= @event.event_date %></p>
+      <% if user_signed_in? && !@event.attendees.exists?(current_user.id) %>
+        <%= form_with url: event_event_attendances_path(@event) do |form| %>
+          <%= form.submit "Join this event", class: "btn btn-primary" %>
+        <% end %>
+      <% end %>
     </div>
     <div class="mt-4">
       <h4>Attendees</h4>

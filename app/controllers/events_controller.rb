@@ -15,7 +15,7 @@ class EventsController < ApplicationController
 
     if @event.save
       EventAttendance.create! attendee: current_user, attended_event: @event
-      redirect_to @event
+      redirect_to @event, success: 'You have been added to the events attendee list'
     else
       render :new
     end
