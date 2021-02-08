@@ -15,9 +15,12 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'capybara', '~> 3.35', '>= 3.35.3'
+  gem 'rspec-rails', '~> 4.0', '>= 4.0.2'
 end
 
 group :development do
+  gem 'guard-rspec', require: false
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'rubocop', '~> 1.9', '>= 1.9.1'
