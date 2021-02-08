@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :event do
+  factory :event, aliases: %i[attended_event] do
     creator
     name { 'hello world' }
     event_date { Time.zone.now }
