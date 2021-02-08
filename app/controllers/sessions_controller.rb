@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       sign_in(@user)
       redirect_to root_path
     else
-      flash.now[:alert] = 'Invalid name'
+      flash.now[:error] = 'Invalid name'
       render :new
     end
   end
