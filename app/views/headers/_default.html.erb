@@ -1,0 +1,28 @@
+<div class="Header">
+  <div class="Header-item">
+    <%= link_to root_path, class: "Header-link f4 d-flex flex-items-center" do %>
+      <%= octicon "mark-github", class: "mr-2", height: 32 %>
+      <span>GitHub</span>
+    <% end %>
+  </div>
+  <div class="Header-item Header-item--full">
+    Menu
+  </div>
+  <% if current_user %>
+    <div class="Header-item mr-0">
+      <details class="dropdown details-reset details-overlay d-inline-block" open>
+        <summary aria-haspopup="true">
+          <img class="avatar avatar-5 circle" alt="@octocat" src="https://github.com/octocat.png">
+        </summary>
+        <ul class="dropdown-menu dropdown-menu-sw">
+          <li class="px-3">
+            <span class="d-block text-gray">Signed in as</span>
+            <span class="d-block text-gray-dark h5"><%= current_user.name %></span>
+          </li>
+          <li class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#url">Sign out</a></li>
+        </ul>
+      </details>
+    </div>
+  <% end %>
+</div>
