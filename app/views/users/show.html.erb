@@ -1,5 +1,9 @@
-<% @users_event.each do |event| %>
-  <div>
-    <%= event.name %>
-  </div>
+<h3>Previously attended events</h3>
+<% @previous_events.each do |event| %>
+  <%= event.name %>
+<% end %>
+
+<h3>Upcoming events</h3>
+<% @upcoming_events.each do |event| %>
+  <%= event.name %>
 <% end %>
