@@ -4,7 +4,7 @@ module SessionsHelper
   end
 
   def current_user
-    @current_user ||= User.find_by(name: cookies[:auth_token]) if cookies[:auth_token]
+    @current_user ||= User.find_by(id: cookies[:auth_token]) if cookies[:auth_token]
   end
 
   def user_signed_in?

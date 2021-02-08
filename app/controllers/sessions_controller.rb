@@ -4,10 +4,10 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = Authentication.new(user_params)
+    @user = User.find_by(name: params[:name])
 
-    if @user.authenticated?
-      sign_in(@user.user)
+    if @user
+      sign_in(@user)
       redirect_to root_path
     else
       flash.now[:alert] = 'Invalid name'
