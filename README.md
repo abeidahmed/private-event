@@ -13,7 +13,7 @@
 
 - Clone the repo `https://github.com/abeidahmed/private-event.git`
 - `cd` into the project
-- `git checkout -b feature-event`
+- `git pull origin feature-event`
 - `bundle install`
 - Setup your `db` in the `database.yml` file
 - Run `rails db:create db:migrate`
