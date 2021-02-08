@@ -20,6 +20,10 @@
 - Run `rails s`
 - Visit `localhost:3000`
 
+## Testing
+
+- Run `bundle exec rspec`
+
 ## Screenshots
 
 ### All events
