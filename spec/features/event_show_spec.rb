@@ -19,4 +19,8 @@ RSpec.describe 'EventShows', type: :feature do
       expect(page).to have_text(user.name)
     end
   end
+
+  it 'should have the exit button' do
+    expect(page).to have_button('Exit this event')
+  end
 end
