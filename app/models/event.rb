@@ -7,4 +7,7 @@ class Event < ApplicationRecord
   validates :name, :event_date, presence: true
 
   delegate :name, to: :creator, prefix: true
+
+  scope :past, -> { where('event_date <= ?', Time.zone.now) }
+  scope :upcoming, -> { where('event_date > ?', Time.zone.now) }
 end
