@@ -81,6 +81,11 @@ GEM
     crass (1.0.6)
     diff-lcs (1.4.4)
     erubi (1.10.0)
+    factory_bot (6.1.0)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.1.0)
+      factory_bot (~> 6.1.0)
+      railties (>= 5.0.0)
     ffi (1.14.2)
     formatador (0.2.5)
     globalid (0.4.2)
@@ -272,6 +277,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (~> 3.35, >= 3.35.3)
+  factory_bot_rails (~> 6.1)
   guard-rspec
   listen (~> 3.3)
   octicons_helper
