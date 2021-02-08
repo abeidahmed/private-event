@@ -20,6 +20,15 @@
 - Run `rails s`
 - Visit `localhost:3000`
 
+## Screenshots
+
+#### All events
+
+![All events](https://github.com/abeidahmed/private-event/blob/feature-event/public/images/all_events.png)
+![New event](https://github.com/abeidahmed/private-event/blob/feature-event/public/images/new_event.png)
+![Join event](https://github.com/abeidahmed/private-event/blob/feature-event/public/images/join_event.png)
+![Exit event](https://github.com/abeidahmed/private-event/blob/feature-event/public/images/exit_event.png)
+
 ## Built with
 
 - Ruby on rails
