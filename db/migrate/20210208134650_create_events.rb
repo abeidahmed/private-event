@@ -4,6 +4,7 @@ class CreateEvents < ActiveRecord::Migration[6.1]
       t.datetime :event_date, null: false, defautl: ''
       t.string :name, null: false, default: ''
       t.integer :creator_id, null: false
+      t.text :description
 
       t.timestamps
     end
