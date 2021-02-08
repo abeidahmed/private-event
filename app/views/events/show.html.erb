@@ -1,7 +1,18 @@
-<%= @event.name %>
-<%= @event.creator_name %>
-
-<h4>Attendees</h4>
-<% @event.attendees.each do |attendee| %>
-  <%= attendee.name %>
-<% end %>
+<main class="d-flex flex-justify-center py-7">
+  <div>
+    <div>
+      <h2><%= @event.name %></h2>
+      <p>Created by <%= @event.creator_name %> on <%= @event.event_date %></p>
+    </div>
+    <div class="mt-4">
+      <h4>Attendees</h4>
+      <% if @event.attendees.size.positive? %>
+        <% @event.attendees.each do |attendee| %>
+          <p><%= attendee.name %></p>
+        <% end %>
+      <% else %>
+        <p>Currently no one is attending this event</p>
+      <% end %>
+    </div>
+  </div>
+</main>
