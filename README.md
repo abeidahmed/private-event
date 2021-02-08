@@ -57,7 +57,3 @@
 - Commit your changes `git commit -m 'Awesome feature'`
 - Push it `git push -u origin awesome-feature`
 - Open a pull request using this branch
-
-## License
-
-[MIT](https://github.com/abeidahmed/tic-tac-toe/blob/development/LICENSE) licensed software.
