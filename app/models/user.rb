@@ -13,4 +13,8 @@ class User < ApplicationRecord
   def previous_events
     attended_events.where('event_date <= ?', Time.zone.now)
   end
+
+  def find_attended_event(event)
+    event_attendances.find_by(attended_event_id: event)
+  end
 end

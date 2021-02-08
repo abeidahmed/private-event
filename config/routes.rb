@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :events, only: %i[index new create show] do
     resources :event_attendances, only: %i[create]
   end
+
+  resources :event_attendances, only: %i[destroy]
 end

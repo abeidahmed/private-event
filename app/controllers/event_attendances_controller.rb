@@ -12,4 +12,11 @@ class EventAttendancesController < ApplicationController
       redirect_back fallback_location: root_path, success: 'You have joined this event'
     end
   end
+
+  def destroy
+    @event_attended = EventAttendance.find(params[:id])
+    @event_attended.destroy
+
+    redirect_back fallback_location: root_path, success: 'Removed from this event'
+  end
 end
