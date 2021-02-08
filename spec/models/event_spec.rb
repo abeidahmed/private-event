@@ -11,6 +11,12 @@ RSpec.describe Event, type: :model do
     it { is_expected.to have_many(:attendees).source(:attendee) }
   end
 
+  describe 'validation' do
+    it { is_expected.to validate_presence_of(:name) }
+
+    it { is_expected.to validate_presence_of(:event_date) }
+  end
+
   describe '::past' do
     it 'should list all the past events' do
       past_event = create(:event, :past)
