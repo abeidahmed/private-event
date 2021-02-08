@@ -15,10 +15,11 @@
           <img class="avatar avatar-5 circle" alt="@octocat" src="https://github.com/octocat.png">
         </summary>
         <ul class="dropdown-menu dropdown-menu-sw">
-          <li class="px-3">
+          <li class="px-3 pb-2">
             <span class="d-block text-gray">Signed in as</span>
             <span class="d-block text-gray-dark h5"><%= current_user.name %></span>
           </li>
+          <li><%= link_to "Your events", user_path(current_user), class: "dropdown-item" %></li>
           <li class="dropdown-divider"></li>
           <li><%= link_to "Sign out", session_path("current_user"), method: :delete, class: "dropdown-item" %></li>
         </ul>
