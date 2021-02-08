@@ -16,7 +16,7 @@
 - `git pull origin feature-event`
 - `bundle install`
 - Setup your `db` in the `database.yml` file
-- Run `rails db:create db:migrate`
+- Run `rails db:setup`
 - Run `rails s`
 - Visit `localhost:3000`
 
