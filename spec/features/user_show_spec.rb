@@ -8,7 +8,7 @@ RSpec.describe 'UserShows', type: :feature do
     feature_sign_in(user)
     visit user_path(user)
 
-    expect(page).to have_text(event.name)
+    expect(page).to have_link(event.name, href: event_path(event))
   end
 
   it 'should list all the upcoming events' do
@@ -18,7 +18,7 @@ RSpec.describe 'UserShows', type: :feature do
     feature_sign_in(user)
     visit user_path(user)
 
-    expect(page).to have_text(event.name)
+    expect(page).to have_link(event.name, href: event_path(event))
   end
 
   it 'should list all the previously attended events' do
@@ -28,6 +28,6 @@ RSpec.describe 'UserShows', type: :feature do
     feature_sign_in(user)
     visit user_path(user)
 
-    expect(page).to have_text(event.name)
+    expect(page).to have_link(event.name, href: event_path(event))
   end
 end
