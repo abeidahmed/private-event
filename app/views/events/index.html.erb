@@ -3,17 +3,13 @@
     <div class="Box width-full max-w-sm mx-auto">
       <div class="Box-body">
         <h3 class="mb-3">Upcoming events</h3>
-        <% @upcoming_events.each do |event| %>
-          <p class="f4"><%= link_to event.name, event %> <span class="text-gray f5">on <%= event.event_date %></span></p>
-        <% end %>
+        <%= render @upcoming_events %>
       </div>
     </div>
     <div class="Box width-full max-w-sm mx-auto mt-4">
       <div class="Box-body">
         <h3 class="mb-3">Past events</h3>
-        <% @past_events.each do |event| %>
-          <p class="f4"><%= link_to event.name, event %> <span class="text-gray f5">on <%= event.event_date %></span></p>
-        <% end %>
+        <%= render @past_events %>
       </div>
     </div>
   </div>
