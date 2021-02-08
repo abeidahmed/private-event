@@ -5,7 +5,7 @@
       <p>Created by <%= @event.creator_name %> on <%= @event.event_date %></p>
       <%= render "event_actionable" %>
     </div>
-    <div class="mt-4">
+    <div class="mt-4" id="attendee-list">
       <h4>Attendees</h4>
       <% if @event.attendees.size.positive? %>
         <% @event.attendees.each do |attendee| %>
