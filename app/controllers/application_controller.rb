@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   protected
 
   def authenticate_user
-    redirect_to root_path unless user_signed_in?
+    redirect_to root_path, error: 'Please login or sign up to continue' unless user_signed_in?
   end
 end
