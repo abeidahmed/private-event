@@ -1,7 +1,9 @@
 class EventsController < ApplicationController
   before_action :authenticate_user, only: %i[new create]
 
-  def index; end
+  def index
+    @events = Event.all
+  end
 
   def new
     @event = Event.new
@@ -17,7 +19,9 @@ class EventsController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @event = Event.find(params[:id])
+  end
 
   private
 
