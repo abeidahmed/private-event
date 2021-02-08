@@ -20,9 +20,16 @@
             <span class="d-block text-gray-dark h5"><%= current_user.name %></span>
           </li>
           <li class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#url">Sign out</a></li>
+          <li><%= link_to "Sign out", session_path("current_user"), method: :delete, class: "dropdown-item" %></li>
         </ul>
       </details>
+    </div>
+  <% else %>
+    <div class="Header-item">
+      <%= link_to "Sign in", new_session_path, class: "Header-link" %>
+    </div>
+    <div class="Header-item">
+      <%= link_to "Sign up", new_user_path, class: "btn btn-primary" %>
     </div>
   <% end %>
 </div>
