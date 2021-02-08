@@ -1,9 +1,20 @@
-<h3>Upcoming events</h3>
-<% @upcoming_events.each do |event| %>
-  <%= event.name %>
-<% end %>
-
-<h3>Past events</h3>
-<% @past_events.each do |event| %>
-  <%= event.name %>
-<% end %>
+<main class="d-flex flex-justify-center py-7">
+  <div class="width-full mx-auto">
+    <div class="Box width-full max-w-sm mx-auto">
+      <div class="Box-body">
+        <h3 class="mb-3">Upcoming events</h3>
+        <% @upcoming_events.each do |event| %>
+          <p class="f4"><%= link_to event.name, event %> <span class="text-gray f5">on <%= event.event_date %></span></p>
+        <% end %>
+      </div>
+    </div>
+    <div class="Box width-full max-w-sm mx-auto mt-4">
+      <div class="Box-body">
+        <h3 class="mb-3">Past events</h3>
+        <% @past_events.each do |event| %>
+          <p class="f4"><%= link_to event.name, event %> <span class="text-gray f5">on <%= event.event_date %></span></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</main>
