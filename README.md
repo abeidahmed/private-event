@@ -28,19 +28,19 @@
 
 ### All events
 
-![All events](https://github.com/abeidahmed/private-event/blob/feature-event/public/images/all_events.png)
+![All events](/public/images/all_events.png)
 
 ### New event
 
-![New event](https://github.com/abeidahmed/private-event/blob/feature-event/public/images/new_event.png)
+![New event](/public/images/new_event.jpg)
 
 ### Join event
 
-![Join event](https://github.com/abeidahmed/private-event/blob/feature-event/public/images/join_event.png)
+![Join event](/public/images/join_event.jpg)
 
 ### Exit event
 
-![Exit event](https://github.com/abeidahmed/private-event/blob/feature-event/public/images/exit_event.png)
+![Exit event](/public/images/exit_event.jpg)
 
 ## Built with
 
