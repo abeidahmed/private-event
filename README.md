@@ -32,15 +32,15 @@
 
 ### New event
 
-![New event](/public/images/new_event.jpg)
+![New event](/public/images/new_event.png)
 
 ### Join event
 
-![Join event](/public/images/join_event.jpg)
+![Join event](/public/images/join_event.png)
 
 ### Exit event
 
-![Exit event](/public/images/exit_event.jpg)
+![Exit event](/public/images/exit_event.png)
 
 ## Built with
 
