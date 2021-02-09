@@ -1,0 +1,11 @@
+<% if user_signed_in? %>
+  <% if @event.attendees.exists?(current_user.id) %>
+    <%= form_with url: event_attendance_path(current_user.find_attended_event(@event)), method: :delete do |form| %>
+      <%= form.submit "Exit this event", class: "btn btn-danger" %>
+    <% end %>
+  <% else %>
+    <%= form_with url: event_event_attendances_path(@event) do |form| %>
+      <%= form.submit "Join this event", class: "btn btn-primary" %>
+    <% end %>
+  <% end %>
+<% end %>

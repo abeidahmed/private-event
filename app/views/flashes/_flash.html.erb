@@ -1,0 +1,11 @@
+<% flash.each do |type, msg| %>
+  <div class="position-fixed top-0 right-0 mb-3 ml-3" style="z-index: 99999999;">
+    <div class="Toast Toast--<%= type %>">
+      <span class="Toast-icon">
+        <%= octicon toast_icon_for(type) %>
+      </span>
+      <span class="Toast-content"><%= msg %></span>
+      <button type="button" class="Toast-dismissButton"><%= octicon "x" %></button>
+    </div>
+  </div>
+<% end %>

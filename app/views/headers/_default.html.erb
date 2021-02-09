@@ -1,0 +1,39 @@
+<div class="Header">
+  <div class="Header-item mr-6">
+    <%= link_to root_path, class: "Header-link f4 d-flex flex-items-center" do %>
+      <%= octicon "mark-github", class: "mr-2", height: 32 %>
+      <span>GitHub</span>
+    <% end %>
+  </div>
+  <div class="Header-item">
+    <%= link_to "All events", events_path, class: "Header-link" %>
+  </div>
+  <div class="Header-item Header-item--full">
+    <%= link_to "New event", new_event_path, class: "Header-link" %>
+  </div>
+  <% if current_user %>
+    <div class="Header-item mr-0">
+      <details class="dropdown details-reset details-overlay d-inline-block">
+        <summary aria-haspopup="true">
+          <img class="avatar avatar-5 circle" alt="@octocat" src="https://github.com/octocat.png">
+        </summary>
+        <ul class="dropdown-menu dropdown-menu-sw">
+          <li class="px-3 pb-2">
+            <span class="d-block text-gray">Signed in as</span>
+            <span class="d-block text-gray-dark h5"><%= current_user.name %></span>
+          </li>
+          <li><%= link_to "Your events", user_path(current_user), class: "dropdown-item" %></li>
+          <li class="dropdown-divider"></li>
+          <li><%= link_to "Sign out", session_path("current_user"), method: :delete, class: "dropdown-item" %></li>
+        </ul>
+      </details>
+    </div>
+  <% else %>
+    <div class="Header-item">
+      <%= link_to "Sign in", new_session_path, class: "Header-link" %>
+    </div>
+    <div class="Header-item">
+      <%= link_to "Sign up", new_user_path, class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

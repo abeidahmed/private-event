@@ -1,0 +1,22 @@
+<main class="d-flex flex-justify-center py-7">
+  <div class="width-full mx-auto">
+    <div class="Box width-full max-w-sm mx-auto">
+      <div class="Box-body">
+        <h3 class="mb-3">Events created by you</h3>
+        <%= render @users_event %>
+      </div>
+    </div>
+    <div class="Box width-full max-w-sm mx-auto mt-4">
+      <div class="Box-body">
+        <h3 class="mb-3">Previously attended events by you</h3>
+        <%= render @previous_events %>
+      </div>
+    </div>
+    <div class="Box width-full max-w-sm mx-auto mt-4">
+      <div class="Box-body">
+        <h3 class="mb-3">Upcoming events for you</h3>
+        <%= render @upcoming_events %>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,36 @@
+<main class="d-flex flex-justify-center min-h-screen bg-gray">
+  <div class="max-w-sm width-full py-8">
+    <h1 class="f2 text-center">Create an event</h1>
+    <%= form_with model: @event, class: "mt-4 Box Box--spacious" do |form| %>
+      <div class="Box-body">
+        <div class="form-group mt-0">
+          <div class="form-group-header">
+            <%= form.label :name %>
+          </div>
+          <div class="form-group-body">
+            <%= form.text_field :name, class: "form-control", autocomplete: "off", autofocus: true %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-group-header">
+            <%= form.label :event_date %>
+          </div>
+          <div class="form-group-body">
+            <%= form.datetime_local_field :event_date, class: "form-control", autocomplete: "off" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-group-header">
+            <%= form.label :description %>
+          </div>
+          <div class="form-group-body">
+            <%= form.text_area :description, class: "form-control", autocomplete: "off" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= form.submit "Create event", class: "btn btn-primary btn-block" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</main>
